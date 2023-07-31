@@ -6,8 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /usr/src/flask_app
 COPY requirements.txt .
-RUN apt-get update && \
-  apt-get install -y --no-install-recommends tzdata g++ curl
+RUN apt-get update
 RUN apt-get install -y python3-pip
 
 COPY . .
